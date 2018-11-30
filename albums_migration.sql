@@ -2,9 +2,9 @@ USE codeup_test_db;
 drop table if exists albums;
 create table albums (
   id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  aritst VARCHAR(240),
+  artist VARCHAR(240),
   name VARCHAR(240),
-  relaease_date DATETIME(6),
+  release_date INT,
   sales FLOAT,
   genre VARCHAR(240)
 );
