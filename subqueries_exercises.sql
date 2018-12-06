@@ -39,5 +39,22 @@ from employees
 where emp_no IN (
   select emp_no
   from salaries
-  where salary > 157000
-);
+  where salary IN (
+    select max(salary) from salaries
+  ));
+
+SHOW create table employees;
+
+INSERT INTO ad (description, text) VALUES
+('bobzilla2012', 'test'),
+('joezilla2012', 'test'),
+('billyzilla2012', 'test'),
+('adamzilla2012', 'test'),
+('janezilla2012', 'test'),
+('mikezilla2012', 'test');
+
+INSERT INTO categories (cat_name) VALUES ('for sale');
+INSERT INTO categories (cat_name) VALUES ('job');
+INSERT INTO categories (cat_name) VALUES ('buying');
+INSERT INTO categories (cat_name) VALUES ('for sale');
+
